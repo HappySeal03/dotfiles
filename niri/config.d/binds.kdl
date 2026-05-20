@@ -1,0 +1,140 @@
+binds {
+    // Help
+    Mod+Shift+Backslash { show-hotkey-overlay; }
+
+    // Exit
+    Mod+Shift+M { quit; }
+
+    // Shortcuts
+    Mod+Q { spawn "alacritty"; }
+    Mod+E { spawn "cosmic-files"; }
+    Mod+L { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
+    Mod+Space { spawn "rofi" "-show" "drun"; }
+
+    // Notifications
+    Mod+N { spawn "swaync-client" "-t" "-sw"; }
+
+    // Lock/logout
+    Mod+Z { spawn "swaylock"; }
+    Mod+X { spawn "wlogout" "-b" "5"; }
+
+    // Wallpaper switcher
+    Mod+B { spawn "~/.config/colors/scripts/wallpaper.sh"; }
+
+    // Screenshots
+    Print { spawn "flameshot" "gui"; }
+    Mod+Print { spawn "flameshot" "full"; }
+
+    // Close window
+    Mod+C { close-window; }
+
+    // Maximize window
+    Mod+Return { maximize-column; }
+
+    // Focus
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up    { focus-window-up; }
+    Mod+Down  { focus-window-down; }
+
+    // Move windows
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Down  { move-window-down; }
+
+    // Move workspaces
+    Mod+Ctrl+Down { move-workspace-down; }
+    Mod+Ctrl+Up { move-workspace-up; }
+
+
+    // Column sizing (Niri-specific)
+    Mod+R { switch-preset-column-width; }
+    Mod+Ctrl+Left  { set-column-width "-10%"; }
+    Mod+Ctrl+Right { set-column-width "+10%"; }
+
+    // Fullscreen
+    Mod+F { fullscreen-window; }
+
+    // Overview
+    Mod+W repeat=false { toggle-overview; }
+
+
+    // Floating
+    Mod+Y { toggle-window-floating; }
+
+    // Workspace switching
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    // Move windows to workspace
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+    Mod+Shift+0 { move-window-to-workspace 10; }
+
+    // Workspace cycling
+    Mod+WheelScrollDown { focus-workspace-down; }
+    Mod+WheelScrollUp { focus-workspace-up; }
+
+    // Consume/expel windows (VERY useful in Niri)
+    Mod+Comma { consume-or-expel-window-left; }
+    Mod+Period { consume-or-expel-window-right; }
+
+    // Volume
+    XF86AudioRaiseVolume {
+        spawn "wpctl" "set-volume" "-l" "1" "@DEFAULT_AUDIO_SINK@" "5%+";
+    }
+
+    XF86AudioLowerVolume {
+        spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-";
+    }
+
+    XF86AudioMute {
+        spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
+    }
+
+    XF86AudioMicMute {
+        spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
+    }
+
+    // Brightness
+    XF86MonBrightnessUp {
+        spawn "brightnessctl" "s" "10%+";
+    }
+
+    XF86MonBrightnessDown {
+        spawn "brightnessctl" "s" "10%-";
+    }
+
+    // Media
+    XF86AudioNext {
+        spawn "playerctl" "next";
+    }
+
+    XF86AudioPlay {
+        spawn "playerctl" "play-pause";
+    }
+
+    XF86AudioPause {
+        spawn "playerctl" "play-pause";
+    }
+
+    XF86AudioPrev {
+        spawn "playerctl" "previous";
+    }
+}

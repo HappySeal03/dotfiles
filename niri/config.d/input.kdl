@@ -1,0 +1,17 @@
+input {
+    keyboard {
+        xkb {
+            layout "it"
+        }
+    }
+
+    touchpad {
+        natural-scroll
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+cursor {
+    hide-after-inactive-ms 5000
+}

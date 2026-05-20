@@ -1,0 +1,15 @@
+configuration {
+    font: "mono 18";
+    show-icons: true;
+    scroll-method: 1;
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+    @theme "./style.rasi"

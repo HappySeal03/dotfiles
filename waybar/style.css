@@ -1,0 +1,80 @@
+@import "../colors/colors.css";
+
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: "Symbols Nerd Font Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background-color: transparent;
+}
+
+#workspaces button {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 10px;
+  background-color: @surface;
+  color: @text;
+}
+
+#workspaces button:hover {
+  background-color: @surface-alt;
+  color: @text;
+}
+
+#workspaces button.active {
+  background-color: @accent;
+  color: #111111;
+}
+#workspaces button.urgent {
+  background-color: @urgent;
+  color: #111111;
+}
+
+#clock,
+#pulseaudio,
+#mpris,
+#custom-logo,
+#custom-power,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#upower,
+#backlight,
+#window,
+#custom-sep,
+#custom-shutdown,
+#custom-hypridle,
+#custom-powerprofile {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  background-color: @surface;
+  color: @text;
+  border-radius: 20px;
+  border: 1px solid @border;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+tooltip {
+  background-color: @surface-alt;
+  border: 2px solid @border;
+  color: @text;
+}
+
+#upower.charging {
+    border: 2px solid lime;
+}
+
+#custom-shutdown:hover {
+    background-color: @accent;
+    color: @black
+}

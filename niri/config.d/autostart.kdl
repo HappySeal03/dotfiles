@@ -1,0 +1,16 @@
+// Idle
+// spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock" "-f" "timeout" "600" "niri" "msg" "action" "power-off-monitors" "resume" "niri" "msg" "action" "power-on-monitors" "before-sleep" "swaylock" "-f"
+
+spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f" "timeout" "600" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock -f"
+
+spawn-at-startup "waybar" "-c" "/home/lorenzo/.config/waybar/waybar.conf"
+spawn-at-startup "nm-applet"
+spawn-at-startup "blueman-applet"
+spawn-at-startup "swaync"
+spawn-at-startup "swaybg" "-i" "/home/lorenzo/.config/colors/wallpapers/active/active.jpg" "-m" "fill"
+
+// Bluetooth disables by default
+spawn-at-startup "rfkill" "block" "bluetooth"
+
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "breeze"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"

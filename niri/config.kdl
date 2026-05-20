@@ -1,0 +1,8 @@
+include "~/.config/niri/config.d/envs.kdl"
+include "~/.config/niri/config.d/input.kdl"
+include "~/.config/niri/config.d/layout.kdl"
+include "~/.config/niri/config.d/colors.kdl"
+include "~/.config/niri/config.d/output.kdl"
+include "~/.config/niri/config.d/autostart.kdl"
+include "~/.config/niri/config.d/window_rules.kdl"
+include "~/.config/niri/config.d/binds.kdl"

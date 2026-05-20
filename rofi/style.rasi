@@ -1,0 +1,140 @@
+/***************************************************
+ * Name:     Template
+ * Author:   Me
+ ***************************************************/
+
+@import "~/.config/colors/colors.rasi"
+
+/* Comment */
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{name}";
+    disable-history: false;
+    click-to-exit: true;
+    location: 0;
+}
+
+window {
+    transparency: "background";
+    background-color: @bg;
+    text-color: @text;
+    border: 2px;
+    border-color: @border;
+    border-radius: 10px;
+    width: 700px;
+    anchor: center;
+    x-offset: 0;
+    y-offset: 0;
+}
+
+prompt {
+    enabled: false;
+    padding: 8px;
+    background-color: @surface;
+    text-color: @text;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+    expand: false;
+    str: "";
+    border-radius: 100%;
+    background-color: @surface-alt;
+    text-color: @accent;
+    padding: 8px 12px 8px 12px;
+    font:	"Iosevka Nerd Font 10";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @text;
+    placeholder-color: @text-muted;
+    expand: true;
+    horizontal-align: 0;
+    placeholder: "Search...";
+    blink: true;
+    border: 0px 0px 2px 0px;
+    border-color: @accent;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+inputbar {
+    children: [ textbox-prompt-colon, prompt, entry ];
+    background-color: @surface;
+    text-color: @text;
+    expand: false;
+    border: 0px 0px 0px 0px;
+    border-color: @border;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    position: center;
+}
+
+case-indicator {
+    background-color: @surface;
+    text-color: @text-muted;
+    spacing: 0;
+}
+
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 7;
+    spacing: 5px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [ inputbar, listview ];
+    spacing:  10px;
+    padding:  10px;
+}
+
+element {
+    padding: 10px;
+    background-color: transparent;
+    text-color: @text;
+    border-radius: 20px;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    size: 3.0ch;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    margin: 15px;
+}
+
+element normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element normal active {
+    background-color: @surface-alt;
+    color: @text;
+}
+
+element normal urgent {
+    background-color: @urgent;
+    color: @black;
+}
+
+element selected {
+    background-color: @accent;
+    color: @black;
+}
+
+element alternate active {
+    text-color: @text-muted;
+}
