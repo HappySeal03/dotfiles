@@ -41,10 +41,7 @@
       "clear-all-button": true,
       "button-text": "Clear"
     },
-    "mpris": {
-        "image-radius": 12,
-        "image-size": 96
-    },
+    "mpris": {},
     "volume": {
       "label": "",
       "step": 5

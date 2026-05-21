@@ -79,15 +79,13 @@
 .widget-mpris {
   padding: 0;
   border: none;
-
   border-radius: 18px;
-  background: transparent;
+  color: @text;
+  background: @surface;
 }
 .widget-mpris .widget-mpris-player {
-  background-color: @surface-alt;
-  border-radius: 12px;
-  border: 1px solid @border;
   padding: 16px;
+  background-color: @surface;
 }
 .widget-mpris .widget-mpris-album-art {
   background: none;
