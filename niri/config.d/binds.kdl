@@ -10,6 +10,7 @@ binds {
     Mod+E { spawn "cosmic-files"; }
     Mod+L { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
     Mod+Space { spawn "rofi" "-show" "drun"; }
+    Mod+M { spawn "simple-mpris-controls"; }
 
     // Notifications
     Mod+N { spawn "swaync-client" "-t" "-sw"; }
