@@ -11,6 +11,7 @@ binds {
     Mod+L { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
     Mod+Space { spawn "rofi" "-show" "drun"; }
     Mod+M { spawn "simple-mpris-controls"; }
+    Mod+V { spawn "pavucontrol"; }
 
     // Notifications
     Mod+N { spawn "swaync-client" "-t" "-sw"; }
