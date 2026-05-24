@@ -19,3 +19,7 @@ layout {
         proportion 0.5
     }
 }
+
+hotkey-overlay {
+    skip-at-startup
+}
