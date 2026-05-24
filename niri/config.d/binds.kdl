@@ -21,7 +21,7 @@ binds {
     Mod+X { spawn "wlogout" "-b" "5"; }
 
     // Wallpaper switcher
-    Mod+B { spawn "~/.config/colors/scripts/wallpaper.sh"; }
+    Mod+B { spawn "~/.config/colors/scripts/matugen_colors.sh"; }
 
     // Screenshots
     Print { spawn "flameshot" "gui"; }

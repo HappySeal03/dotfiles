@@ -1,0 +1,56 @@
+[config]
+# If set to enabled, it will check for updates when you run the matugen command, notifying you that an update is avaiable.
+# WARNING: Matugen needs to be compiled with the `update-informer` feature for this to work.
+version_check = false
+
+# The color which should be used as the source_color if no good color was found from an image.
+# Can be defined in any css format.
+# The cli flag will override this if used.
+fallback_color = "#ffbf9b"
+
+# Which color to choose if multiple good colors were found from an image.
+# choices: [darkness, lightness, saturation, less-saturation, value, closest-to-fallback]
+# The cli flag will override this if used.
+prefer = "closest-to-fallback"
+
+# Enables caching which will cache the colorscheme, custom colors, etc. into a cache folder located in
+# Linux: $XDG_CACHE_HOME/matugen/<file> or $HOME/.cache/matugen/images/<file>
+# The file follows this naming: <image_name>.<image_extension>.<image_hash>.json
+# For example: testimage.png.0cfd2d624b3d09bf6246b7be9ca79e207e7aa1189d961d44949628b99811bb9d.json
+# You can modify the cache and it will then be loaded when using the same image.
+# The colors are defined using the #RRGGBBAA format.
+caching = false
+
+# Defaults to the contrast from CLI if unspecified.
+# Value from -1 to 1. 
+# -1 represents minimum contrast, 0 represents standard (i.e. the design as spec'd),
+# and 1 represents maximum contrast.
+contrast = 1.0
+
+[templates.colors_css]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/colors/colors.css'
+
+[templates.colors_rasi]
+input_path = '~/.config/matugen/templates/colors.rasi'
+output_path = '~/.config/colors/colors.rasi'
+
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri.kdl'
+output_path = '~/.config/niri/config.d/colors.kdl'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk4.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.alacritty]
+input_path = "~/.config/matugen/templates/alacritty.yml"
+output_path = "~/.config/alacritty/colors.yml"
+
+[templates.wlogout]
+input_path = "~/.config/matugen/templates/wlogout.css"
+output_path = "~/.config/wlogout/style.css"
+
+[template.simple-mpris-controls]
+input_path = "~/.config/matugen/templates/simple-mpris-controls.css"
+output_path = "~/.config/simple-mpris-controls/style.css"
