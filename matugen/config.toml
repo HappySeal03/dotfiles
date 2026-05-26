@@ -43,6 +43,11 @@ output_path = '~/.config/niri/config.d/colors.kdl'
 input_path = '~/.config/matugen/templates/gtk4.css'
 output_path = '~/.config/gtk-4.0/gtk.css'
 
+[templates.kvantum]
+input_path = "~/.config/matugen/templates/kvantum.kvconfig"
+output_path = "~/.config/Kvantum/Matugen/Matugen.kvconfig"
+post_hook = "kvantummanager --set Matugen"
+
 [templates.alacritty]
 input_path = "~/.config/matugen/templates/alacritty.yml"
 output_path = "~/.config/alacritty/colors.yml"

@@ -7,7 +7,7 @@ binds {
 
     // Shortcuts
     Mod+Q { spawn "alacritty"; }
-    Mod+E { spawn "cosmic-files"; }
+    Mod+E { spawn "nautilus"; }
     Mod+L { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
     Mod+Space { spawn "rofi" "-show" "drun"; }
     Mod+M { spawn "simple-mpris-controls"; }
