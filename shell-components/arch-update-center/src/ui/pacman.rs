@@ -1,27 +1,42 @@
-use crate::ui::update_list::UpdateList;
+use crate::{
+    backend::{pacman::PacmanUpdater, updater::Updater},
+    ui::update_list::UpdateList,
+};
 
 pub fn pacman_page() -> gtk::Box {
     let widget = UpdateList::new("Pacman Updates");
 
-    widget.add_update("Example", "1.0", "1.1");
-    widget.add_update("Example", "1.0", "1.2");
-    widget.add_update("Example", "1.0", "1.3");
-    widget.add_update("Example", "1.0", "1.4");
-    widget.add_update("Example", "1.0", "1.5");
-    widget.add_update("Example", "1.0", "1.6");
-    widget.add_update("Example", "1.0", "1.7");
-    widget.add_update("Example", "1.0", "1.8");
-    widget.add_update("Example", "1.0", "1.9");
-    widget.add_update("Example", "1.0", "1.10");
-    widget.add_update("Example", "1.0", "1.11");
-    widget.add_update("Example", "1.0", "1.12");
+    let updater = PacmanUpdater::new();
 
-    widget.set_on_refresh(|| {
+    let available_updates = updater.check_for_updates();
+
+    for u in available_updates {
+        widget.add_update(&u.package, &u.old_version, &u.new_version);
+    }
+
+    let updater_clone = updater.clone();
+    widget.set_on_refresh(move || {
         println!("Refresh pacman updates");
+
+        let available_updates = updater_clone.check_for_updates();
+        for u in available_updates {
+            widget.add_update(&u.package, &u.old_version, &u.new_version);
+        }
     });
 
-    widget.set_on_update(|| {
+    let updater_clone = updater.clone();
+    widget.set_on_update(move || {
         println!("Updating pacman packages");
+        let res = updater_clone.update();
+        // TODO: toast notification instead of print
+        match res {
+            Ok(v) => {
+                println!("Update ok");
+            }
+            Err(e) => {
+                println!("Error with updating");
+            }
+        }
     });
 
     widget.container
