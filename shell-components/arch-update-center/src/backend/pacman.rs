@@ -12,7 +12,7 @@ impl PacmanUpdater {
 }
 
 impl Updater for PacmanUpdater {
-    fn lock_db(&self) -> Result<bool, Box<dyn std::error::Error>> {
+    fn lock_db(&self) -> Result<bool, Box<dyn std::error::Error + Send + Sync>> {
         Ok(false)
     }
 
@@ -42,8 +42,12 @@ impl Updater for PacmanUpdater {
             .collect()
     }
 
-    fn update(&self) -> Result<bool, Box<dyn Error>> {
-        let status = Command::new("pkexec").arg("pacman").arg("-Syu").status()?;
+    fn update(&self) -> Result<bool, Box<dyn Error + Send + Sync>> {
+        let status = Command::new("pkexec")
+            .arg("pacman")
+            .arg("-Syu")
+            .arg("--noconfirm")
+            .status()?;
 
         Ok(status.success())
     }

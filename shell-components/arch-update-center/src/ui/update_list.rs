@@ -1,9 +1,11 @@
-use gtk::{Box, Orientation, ScrolledWindow, prelude::*};
+use gtk::{Box, Orientation, ScrolledWindow, Spinner, prelude::*};
 use gtk::{Button, Label, ListBox, ListBoxRow};
 
 pub struct UpdateList {
     pub container: gtk::Box,
     pub list: ListBox,
+    spinner: Spinner,
+    loading_message: Label,
     refresh_button: Button,
     update_button: Button,
 }
@@ -37,6 +39,17 @@ impl UpdateList {
         header.append(&update_button);
         header.set_hexpand(true);
 
+        let spinner = Spinner::new();
+        spinner.set_visible(false);
+        spinner.set_halign(gtk::Align::Center);
+        spinner.set_margin_top(12);
+        spinner.set_margin_bottom(12);
+
+        let loading_message = Label::new(Some(""));
+        loading_message.set_visible(false);
+        loading_message.set_halign(gtk::Align::Center);
+        loading_message.set_margin_top(12);
+
         let scroll = ScrolledWindow::builder()
             .vexpand(true)
             .hscrollbar_policy(gtk::PolicyType::Never)
@@ -49,13 +62,38 @@ impl UpdateList {
         scroll.set_child(Some(&list));
 
         container.append(&header);
+        container.append(&spinner);
+        container.append(&loading_message);
         container.append(&scroll);
 
         Self {
             container,
             list,
+            spinner,
+            loading_message,
             refresh_button,
             update_button,
+        }
+    }
+
+    pub fn set_loading(&self, loading: bool, message: &str) {
+        if loading {
+            self.spinner.set_visible(true);
+            self.loading_message.set_text(message);
+            self.loading_message.set_visible(true);
+            self.list.set_visible(true);
+            self.spinner.start();
+
+            self.refresh_button.set_sensitive(false);
+            self.update_button.set_sensitive(false);
+        } else {
+            self.spinner.stop();
+            self.spinner.set_visible(false);
+            self.loading_message.set_visible(false);
+            self.list.set_visible(true);
+
+            self.refresh_button.set_sensitive(true);
+            self.update_button.set_sensitive(true);
         }
     }
 

@@ -8,6 +8,6 @@ pub struct Update {
 
 pub trait Updater {
     fn check_for_updates(&self) -> Vec<Update>;
-    fn update(&self) -> Result<bool, Box<dyn Error>>;
-    fn lock_db(&self) -> Result<bool, Box<dyn Error>>;
+    fn update(&self) -> Result<bool, Box<dyn Error + Send + Sync>>;
+    fn lock_db(&self) -> Result<bool, Box<dyn Error + Send + Sync>>;
 }

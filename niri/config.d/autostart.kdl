@@ -9,6 +9,9 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "swaync"
 spawn-at-startup "swaybg" "-i" "/home/lorenzo/.config/colors/wallpapers/active/active.jpg" "-m" "fill"
 
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+
 // Bluetooth disables by default
 spawn-at-startup "rfkill" "block" "bluetooth"
 
