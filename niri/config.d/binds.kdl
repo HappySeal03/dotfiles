@@ -24,8 +24,8 @@ binds {
     Mod+B { spawn "~/.config/colors/scripts/matugen_colors.sh"; }
 
     // Screenshots
-    Print { spawn "flameshot" "gui"; }
-    Mod+Print { spawn "flameshot" "full"; }
+    Mod+P { screenshot; }
+    Mod+Shift+P { screenshot-screen; }
 
     // Close window
     Mod+C { close-window; }
@@ -50,7 +50,7 @@ binds {
     Mod+Ctrl+Up { move-workspace-up; }
 
 
-    // Column sizing (Niri-specific)
+    // Column sizing
     Mod+R { switch-preset-column-width; }
     Mod+Ctrl+Left  { set-column-width "-10%"; }
     Mod+Ctrl+Right { set-column-width "+10%"; }
@@ -93,7 +93,7 @@ binds {
     Mod+WheelScrollDown { focus-workspace-down; }
     Mod+WheelScrollUp { focus-workspace-up; }
 
-    // Consume/expel windows (VERY useful in Niri)
+    // Consume/expel windows
     Mod+Comma { consume-or-expel-window-left; }
     Mod+Period { consume-or-expel-window-right; }
 
