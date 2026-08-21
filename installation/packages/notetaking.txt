@@ -1,0 +1,4 @@
+# Notetaking
+
+okular
+typst

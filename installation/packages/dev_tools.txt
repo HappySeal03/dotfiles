@@ -1,0 +1,10 @@
+# Dev tools
+
+git
+
+go
+jdk-openjdk
+
+docker
+podman
+podman-desktop

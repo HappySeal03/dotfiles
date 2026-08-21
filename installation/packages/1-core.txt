@@ -1,0 +1,39 @@
+# Core
+
+niri
+alacritty
+btop
+fastfetch
+jq
+man-db
+tree
+flatpak
+
+# Editor
+neovim
+ripgrep
+luarocks
+wl-clipboard
+
+# System
+networkmanager
+network-manager-applet
+bluez
+bluez-utils
+brightnessctl
+pavucontrol
+power-profiles-daemon
+polkit-gnome
+xdg-desktop-portal-gnome
+xwayland-satellite
+
+# Shell
+waybar
+rofi
+swaync
+swaybg
+swaylock
+swayidle
+matugen
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono

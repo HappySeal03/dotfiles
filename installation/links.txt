@@ -1,0 +1,11 @@
+# Dirs from the dotfiles directory that will be linked to ~/.config
+# by the installation script
+
+colors
+matugen
+rofi
+waybar
+niri
+swaync
+wlogout
+simple-mpris-controls
