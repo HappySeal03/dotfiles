@@ -219,6 +219,7 @@ pacman_packages=()
 aur_packages=()
 flatpaks=()
 links=()
+extras=()
 
 # -------------------------------------------------------------------
 # Pacman
@@ -231,6 +232,8 @@ if grep -Fxq "Pacman packages" <<< "$selected_sections"; then
 	mapfile -t selected_files < <(
 		select_files "$PACKAGES_DIR" "Pacman package groups"
 	)
+
+    echo "Discarding already installed packages..."
 
 	if ((${#selected_files[@]})); then
 		mapfile -t pacman_packages < <(
@@ -251,6 +254,8 @@ if grep -Fxq "AUR packages" <<< "$selected_sections"; then
 	mapfile -t selected_files < <(
 		select_files "$AUR_DIR" "AUR package groups"
 	)
+
+    echo "Discarding already installed packages..."
 
 	if ((${#selected_files[@]})); then
 		while IFS= read -r package; do
@@ -513,6 +518,7 @@ if ((${#links[@]})); then
 		mkdir -p "$(dirname "$destination")"
 
 		ln -sfn "$target" "$destination"
+        echo "$destination -> $target"
 	done
 fi
 

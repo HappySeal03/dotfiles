@@ -2,6 +2,7 @@
 
 discord
 signal-desktop
+obs-studio
 
 nautilus
 gvfs-mtp
