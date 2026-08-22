@@ -6,3 +6,5 @@ obs-studio
 
 nautilus
 gvfs-mtp
+
+tailscale

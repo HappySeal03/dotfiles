@@ -9,3 +9,8 @@ jdk-openjdk
 docker
 podman
 podman-desktop
+
+# Networking
+nmap
+traceroute
+wireshark-qt
