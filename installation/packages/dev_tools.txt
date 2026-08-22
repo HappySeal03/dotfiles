@@ -1,6 +1,7 @@
 # Dev tools
 
 git
+vi
 
 go
 jdk-openjdk

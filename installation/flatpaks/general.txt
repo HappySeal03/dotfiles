@@ -1,0 +1,5 @@
+# Generals
+
+io.gitlab.librewolf-community
+
+org.localsend.localsend_app

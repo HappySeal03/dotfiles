@@ -9,3 +9,5 @@ niri
 swaync
 wlogout
 simple-mpris-controls
+nvim
+alacritty

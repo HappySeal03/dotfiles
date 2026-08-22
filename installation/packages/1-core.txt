@@ -2,6 +2,7 @@
 
 niri
 alacritty
+bash-completion
 btop
 fastfetch
 jq
