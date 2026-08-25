@@ -3,6 +3,7 @@
 discord
 signal-desktop
 obs-studio
+easyeffects
 
 nautilus
 gvfs-mtp
