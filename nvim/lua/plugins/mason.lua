@@ -1,26 +1,12 @@
-return {
-    {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = {}
-        },
-        dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            "neovim/nvim-lspconfig",
-        },
-    },
+-- Mason
+require("mason").setup()
 
-    {
-        "jay-babu/mason-nvim-dap.nvim",
-        dependencies = {
-            "mason-org/mason.nvim",
-            "mfussenegger/nvim-dap",
-        },
-        opts = {
-            automatic_installation = true,
-            ensure_installed = {
-                -- add debuggers you want here
-            },
-        },
-    },
-}
+require("mason-lspconfig").setup({
+    ensure_installed = {},
+    automatic_installation = true,
+})
+
+require("mason-nvim-dap").setup({
+    automatic_installation = true,
+    ensure_installed = {},
+})
