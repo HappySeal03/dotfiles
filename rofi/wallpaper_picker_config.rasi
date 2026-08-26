@@ -1,0 +1,153 @@
+@import "~/.config/colors/colors.rasi"
+
+* {
+    font: "mono 16";
+
+    background-color: transparent;
+
+    text-color: @text;
+}
+
+/* ── Window ────────────────────────────────── */
+
+window {
+    width: 90%;
+    height: 90%;
+
+    location: center;
+    anchor: center;
+
+    border: 2px;
+    border-color: @border;
+
+    border-radius: 24px;
+
+    padding: 18px;
+
+    background-color: @bg;
+}
+
+/* ── Main Layout ───────────────────────────── */
+
+mainbox {
+    spacing: 16px;
+
+    children: [
+        inputbar,
+        listview
+    ];
+}
+
+/* ── Search Bar ────────────────────────────── */
+
+inputbar {
+    padding: 12px 18px;
+
+    spacing: 12px;
+
+    border-radius: 100px;
+
+    background-color: @surface;
+
+    children: [
+        prompt,
+        entry
+    ];
+}
+
+prompt {
+    enabled: true;
+
+    str: "";
+
+    font: "Iosevka Nerd Font 12";
+
+    text-color: @text-muted;
+
+    margin: 0px 4px 0px 0px;
+}
+
+entry {
+    placeholder: "Search wallpaper...";
+
+    placeholder-color: @text-muted;
+
+    text-color: @text;
+
+    background-color: transparent;
+
+    border: 0px;
+}
+
+/* ── Wallpaper Grid ────────────────────────── */
+
+listview {
+    columns: 5;
+
+    flow: horizontal;
+
+    fixed-height: true;
+    fixed-columns: true;
+
+    cycle: false;
+
+    scrollbar: false;
+
+    spacing: 16px;
+}
+
+/* ── Wallpaper Cards ───────────────────────── */
+
+element {
+    orientation: vertical;
+
+    padding: 10px;
+
+    spacing: 10px;
+
+    border-radius: 18px;
+
+    background-color: transparent;
+}
+
+/* ── Selected Wallpaper ────────────────────── */
+
+element selected.normal {
+    background-color: @surface-alt;
+
+    border: 2px;
+    border-color: @accent;
+
+    border-radius: 18px;
+}
+
+element-text {
+    enabled: true;
+}
+
+element selected.normal element-text {
+    text-color: @accent;
+}
+
+/* ── Wallpaper Preview ─────────────────────── */
+
+element-icon {
+    size: 170px;
+
+    background-color: transparent;
+
+    border-radius: 14px;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+/* ── Wallpaper Name ────────────────────────── */
+
+element-text {
+    horizontal-align: 0.5;
+
+    text-color: @text;
+
+    background-color: transparent;
+}
