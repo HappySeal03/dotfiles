@@ -61,6 +61,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
 
+        vim.keymap.set("n", "<leader>ad", function()
+            vim.diagnostic.setqflist()
+            vim.cmd("copen")
+        end, { desc = "Open all diagnostics" })
+
+
+        -- Disable format on save for these filetypes
         local disabled = {
             typst = true,
             markdown = true,
