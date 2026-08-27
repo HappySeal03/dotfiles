@@ -80,3 +80,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         })
     end,
 })
+
+-- Language specific configs
+require("plugins.lsp_langs.qml")

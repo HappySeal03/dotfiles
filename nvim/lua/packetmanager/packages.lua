@@ -54,8 +54,10 @@ require("plugins.autoclose")
 require("plugins.bufferline")
 require("plugins.colorscheme")
 require("plugins.comment_toggle")
+
 require("plugins.dap")
 require("plugins.debugging.go")
+
 require("plugins.filetree")
 require("plugins.latex")
 require("plugins.lsp")
