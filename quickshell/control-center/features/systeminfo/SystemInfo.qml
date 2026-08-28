@@ -11,7 +11,8 @@ Card {
 
     Layout.fillWidth: true
 
-    implicitHeight: content.implicitHeight + 24
+    implicitWidth: 320
+    implicitHeight: content.implicitHeight
 
     ColumnLayout {
         id: content

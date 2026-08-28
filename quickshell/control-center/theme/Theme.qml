@@ -3,20 +3,20 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property real scale: 1.25
+    readonly property real scale: 1.2
 
-    readonly property color background: "#202020"
-    readonly property color surface: "#303030"
-    readonly property color surfaceVariant: "#383838"
+    readonly property color background: "#16130b"
+    readonly property color surface: "#343027"
+    readonly property color surfaceVariant: "#4c4639"
 
     readonly property color text: "#ffffff"
-    readonly property color textMuted: "#aaaaaa"
+    readonly property color textMuted: "#ffffff"
 
-    readonly property color accent: "#89b4fa"
-    readonly property color accentText: "#111111"
+    readonly property color accent: "#ffeecb"
+    readonly property color accentText: "#000000"
 
-    readonly property color surfaceHover: "#454545"
-    readonly property color accentHover: "#a6c8ff"
+    readonly property color surfaceHover: "#3f3b31"
+    readonly property color accentHover: "#e4c36c"
 
-    readonly property color outline: "#555555"
+    readonly property color outline: "#f9efdc"
 }

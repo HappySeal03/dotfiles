@@ -43,6 +43,10 @@ output_path = '~/.config/niri/config.d/colors.kdl'
 input_path = '~/.config/matugen/templates/gtk4.css'
 output_path = '~/.config/gtk-4.0/gtk.css'
 
+[templates.qs-theme]
+input_path = '~/.config/matugen/templates/qs-theme.qml'
+output_path = '~/.config/quickshell/control-center/theme/Theme.qml'
+
 [templates.kvantum]
 input_path = "~/.config/matugen/templates/kvantum.kvconfig"
 output_path = "~/.config/Kvantum/Matugen/Matugen.kvconfig"

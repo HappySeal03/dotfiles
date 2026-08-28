@@ -14,7 +14,7 @@ Rectangle {
     signal inputVolumeChangedByUser(real value)
     signal brightnessChangedByUser(real value)
 
-    color: "transparent"
+    color: Theme.surface
     border.color: Theme.outline
     border.width: 1
     radius: 6

@@ -90,11 +90,26 @@ Item {
 
         function onValuesChanged() {
             console.log("MPRIS player list changed");
+            if (root.activePlayer && players.values.indexOf(root.activePlayer) !== -1)
+                return;
+
             root.selectDefaultPlayer();
         }
     }
 
     Component.onCompleted: {
         root.selectDefaultPlayer();
+    }
+
+    Timer {
+        interval: 250
+        repeat: true
+
+        running: root.activePlayer !== null && root.activePlayer.isPlaying
+
+        onTriggered: {
+            if (root.activePlayer)
+                root.activePlayer.positionChanged();
+        }
     }
 }

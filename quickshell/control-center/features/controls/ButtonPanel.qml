@@ -11,7 +11,7 @@ Rectangle {
     Layout.fillWidth: true
     implicitHeight: content.implicitHeight + 16
 
-    color: "transparent"
+    color: Theme.surface
     border.width: 1
     border.color: Theme.outline
     radius: 10

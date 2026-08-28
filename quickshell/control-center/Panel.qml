@@ -16,6 +16,8 @@ PanelWindow {
     property real scaleFactor: Theme.scale
     property var services
 
+    visible: false
+
     anchors {
         top: true
         left: true
@@ -72,7 +74,7 @@ PanelWindow {
             }
         }
 
-        Keys.onSpacePressed: {
+        Keys.onSpacePressed: function (event) {
             root.services.mpris.togglePlaying();
             event.accepted = true;
         }
@@ -93,6 +95,7 @@ PanelWindow {
 
             ColumnLayout {
                 id: controls
+                Layout.fillWidth: true
 
                 spacing: 12
 

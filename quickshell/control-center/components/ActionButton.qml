@@ -21,6 +21,8 @@ Button {
         text: root.text
         color: Theme.text
 
+        anchors.centerIn: parent
+
         font.family: "Symbols Nerd Font"
         font.pixelSize: 20
 

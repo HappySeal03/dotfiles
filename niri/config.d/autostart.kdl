@@ -9,6 +9,8 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "swaync"
 spawn-at-startup "swaybg" "-i" "/home/lorenzo/.config/colors/wallpapers/active/active.jpg" "-m" "fill"
 
+spawn-at-startup "qs" "-c" "control-center"
+
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 

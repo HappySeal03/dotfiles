@@ -13,6 +13,10 @@ binds {
     Mod+M { spawn "simple-mpris-controls"; }
     Mod+V { spawn "pavucontrol"; }
 
+    // QS panel
+    Mod+Minus { spawn "qs" "-c" "control-center" "ipc" "call" "panel" "toggle"; }
+
+
     // Notifications
     Mod+N { spawn "swaync-client" "-t" "-sw"; }
 
