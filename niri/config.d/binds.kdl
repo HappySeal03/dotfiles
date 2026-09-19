@@ -10,11 +10,10 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+L { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
     Mod+Space { spawn "rofi" "-show" "drun"; }
-    Mod+M { spawn "simple-mpris-controls"; }
     Mod+V { spawn "pavucontrol"; }
 
     // QS panel
-    Mod+Minus { spawn "qs" "-c" "control-center" "ipc" "call" "panel" "toggle"; }
+    Mod+M { spawn "qs" "-c" "control-center" "ipc" "call" "panel" "toggle"; }
 
 
     // Notifications
@@ -30,6 +29,9 @@ binds {
     // Screenshots
     Mod+P { screenshot; }
     Mod+Shift+P { screenshot-screen; }
+
+    // Save OBS Replay Buffer
+    Alt+F10 { spawn "~/dotfiles/scripts/replay_buffer/save_replay.sh"; }
 
     // Close window
     Mod+C { close-window; }

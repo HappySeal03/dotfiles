@@ -1,0 +1,12 @@
+[Unit]
+Description=Power Profile Watcher
+After=default.target
+
+[Service]
+ExecStart=%h/dotfiles//scripts/replay_buffer/power_profiles_watcher.sh
+Restart=on-failure
+RestartSec=60
+Environment=WAYLAND_DISPLAY=wayland-0
+
+[Install]
+WantedBy=default.target
