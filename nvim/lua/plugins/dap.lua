@@ -42,3 +42,7 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close()
 end
+
+-- Language specific configurations
+require("plugins.debugging.c_cpp")
+require("plugins.debugging.rust")
