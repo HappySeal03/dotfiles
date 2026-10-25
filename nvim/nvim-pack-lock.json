@@ -13,7 +13,7 @@
       "src": "https://github.com/sindrets/diffview.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "24d4ab0838b250753b307a8747ade06dc99aed9d",
+      "rev": "b3298993d55fa194279b5eb9dbfb3a43da65cadf",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-nvim-dap.nvim": {
@@ -25,7 +25,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "neogit": {
-      "rev": "5adc81b26232954cd7a90f158aa7844c18fc3165",
+      "rev": "70708be9664b7fcdd010eb07bdc3ebc9311c2027",
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "nvim": {
@@ -45,7 +45,7 @@
       "src": "https://github.com/terrortylor/nvim-comment"
     },
     "nvim-dap": {
-      "rev": "9e848e09a697ee95302a3ef2dd43fd6eb709e570",
+      "rev": "cfa2d58f4537aca6ca83e2de1a0d9f1491121264",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
@@ -61,7 +61,7 @@
       "src": "https://github.com/theHamsta/nvim-dap-virtual-text"
     },
     "nvim-lspconfig": {
-      "rev": "af9adce488c75ca0a81017945c2b7fa7b461bc23",
+      "rev": "910f0c4d46aa186641518395bc7e6fffb4d23baf",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -69,11 +69,11 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-tree.lua": {
-      "rev": "b2aadda94b107480c48e548d6db51c6840b7b33c",
+      "rev": "478c69c0fe253caea88de9c5e138bfa77395a59a",
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-web-devicons": {
-      "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
+      "rev": "58447c1fca354bbf184425e4a8d01deecbd6f3c4",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
@@ -89,11 +89,11 @@
       "src": "https://github.com/chomosuke/typst-preview.nvim"
     },
     "vimtex": {
-      "rev": "c1b96604d9a387cde5a98bec8f6687ae3078b571",
+      "rev": "bbfa1501287b65e8803d5cc1007db2c2351c4453",
       "src": "https://github.com/lervag/vimtex"
     },
     "vscode.nvim": {
-      "rev": "aa1102a7e15195c9cca22730b09224a7f7745ba8",
+      "rev": "6439ed89d0e10193f07e92268a321d7c6f6e93ee",
       "src": "https://github.com/Mofiqul/vscode.nvim"
     }
   }

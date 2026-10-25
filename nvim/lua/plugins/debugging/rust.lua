@@ -1,4 +1,4 @@
--- Configuration from:
+-- Part of the configuration from:
 -- https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 
 local dap = require("dap")
