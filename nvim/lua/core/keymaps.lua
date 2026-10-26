@@ -24,6 +24,6 @@ end, { desc = "Toggle the builtin undo tree" })
 -- Move everything past a column to a new line
 vim.keymap.set("n", "<leader>j", function()
     vim.cmd("normal! 64|B") -- target column
-    local keys = vim.api.nvim_replace_termcodes("i<BS><CR><Esc>", true, false, true)
+    local keys = vim.api.nvim_replace_termcodes("i<BS><CR><Esc>$", true, false, true)
     vim.api.nvim_feedkeys(keys, "n", false)
 end, { desc = "Split line at word start" })
